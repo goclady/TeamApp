@@ -46,13 +46,15 @@ class RegisterActivity : AppCompatActivity() {
                 message = "Please enter a valid phone number"
             } else if (!userEmailEntered.matches(Regex("^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\\.[a-zA-Z]+"))) {
                 message = "Please enter a valid email address"
+            } else if (passwordEntered.isBlank()) {
+                message = "Password cannot be empty"
             } else if (passwordEntered.length < 8) {
                 message = "Password must be at least 8 characters long"
             } else {
                 message = "Signed Up Successfully"
-
-
+              
             }
+
 
             Snackbar
                 .make(

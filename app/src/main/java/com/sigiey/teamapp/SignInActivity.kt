@@ -41,15 +41,17 @@ class SignInActivity : AppCompatActivity() {
 
             if (!userEmailEntered.matches(Regex("^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\\.[a-zA-Z]+"))) {
                 message = "Please enter a valid email address"
+            } else if (passwordEntered.isEmpty()) {
+                message = "Password cannot be empty"
             } else if (passwordEntered.length < 8) {
                 message = "Password must be at least 8 characters long"
             } else {
                 message = "Signed in Successfully"
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
-
                 finish()
             }
+
 
             Snackbar
                 .make(
