@@ -14,11 +14,7 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-        var signButton: MaterialButton = this.findViewById(R.id.signInButton)
-        signButton.setOnClickListener{
-            val intent = Intent(this, HomeActivity::class.java)
-            this.startActivity(intent)
-        }
+
         var registerButton: TextView = this.findViewById(R.id.register)
         registerButton.setOnClickListener{            val intent = Intent(this,
             RegisterActivity::class.java)
@@ -30,7 +26,7 @@ class SignInActivity : AppCompatActivity() {
             this.startActivity(intent)
         }
 
-        val signInBtn: Button = findViewById(R.id.signInButton)
+        var signInBtn: MaterialButton = this.findViewById(R.id.signInButton)
 
         val emailEdt: TextInputLayout = findViewById(R.id.email)
         val passwordEdt: TextInputLayout = findViewById(R.id.password)
