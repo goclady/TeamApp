@@ -57,7 +57,7 @@ class SignInActivity : AppCompatActivity() {
 
             Snackbar
                 .make(
-                    findViewById(R.id.register),
+                    findViewById(R.id.signInButton),
                     message,
                     Snackbar.LENGTH_LONG
                 )

@@ -61,7 +61,7 @@ class RegisterActivity : AppCompatActivity() {
 
             Snackbar
                 .make(
-                    findViewById(R.id.register),
+                    findViewById(R.id.sign),
                     message,
                     Snackbar.LENGTH_LONG
                 )
